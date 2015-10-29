@@ -1,0 +1,29 @@
+{
+  "name": "new-portfolio",
+  "main": "index.js",
+  "authors": [
+    "leonardo Quintero <lleo5301@gmail.com>"
+  ],
+  "description": "",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "leonardo"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.7",
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}
