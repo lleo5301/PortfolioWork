@@ -1,0 +1,55 @@
+body {
+	font-family: 'Poiret One', cursive;
+	/*background-color:#F8FFF6;*/
+}
+
+nav{
+	/*font-size: 2em !important;*/
+}
+
+.navbar-brand{
+	font-size:1.7em;
+	color:white;
+	/*font-family: 'Dancing Script', cursive;*/
+	font-weight:bold;
+
+}
+
+.navbar{
+	/*background-color:black;*/
+	background-color:#00171F;
+}
+
+.navbar li a{
+	color: white !important;
+}
+
+/*padding for view*/
+.view{
+	margin-top:50px;
+}
+.heading{
+	margin-top: 30%;
+	color:white;
+}
+
+#homeBanner{
+	height:100vh;
+	background-color:rgba(0,0,0,0.2);
+
+}
+
+#homeBanner img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+	/*height:100%;*/
+	width:100%;
+}
+
+#builtWith{
+	background-color:#FFFFFF;
+	
+}
+
