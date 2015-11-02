@@ -1,0 +1,89 @@
+
+<div class="row view animate-show" ng-hide="loading" fade-in>
+	<div class="col-xs-12 text-center" >
+		<h1>Government Stats  <small><a href="https://github.com/lleo5301/governmentstats">Repo</a></h1>
+		<span class="label label-primary">Node.js</span>
+		<span class="label label-primary">MongoDB</span>
+		<span class="label label-primary">D3.js</span>
+		<span class="label label-primary">Javascript</span>
+		
+	</div>
+	<div class="col-xs-10 col-xs-offset-1 project-description">
+		<h2 class="text-center">About</h2>
+		<p>
+			Once the project is finished loading you will find a few graphs
+			that i have written using the d3.js library. The data comes from an api
+			which i developed using data from government apis. Please note that the
+			data might not be completely accurate and does not represent all of the 
+			United States this data is only for the state of California.
+			**Note this project is still work in progress. - more data will be added soon
+		</p>
+		<h2 class="text-center" ng-hide="loading">The API</h2>
+		<p class="text-center">
+			The API was developed in node.js by me("Leonardo Quintero"). Below you can see the examples of the data being returned by their corresponding calls.
+		</p>
+		<div ng-hide="loading" class="text-center api">
+			<h2> <u>Product Aggregate Endpoint</u></h2>
+			<p class="text-center" >
+				<a href="http://leoqz.me:8446/api/aggregate/byProduct">http://leoqz.me:8446/api/aggregate/byProduct</a>
+				<div class="col-md-6">
+					<table class="table">
+						<thead>
+							<th>Product</th>
+							<th>Total Complaints</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="product in byProduct">
+								<td>{{product.product}}</td>
+								<td>{{product.total}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-6">
+					<h2 class="text-center">JSON</h2>
+					<p class="json">
+						{{byProduct}}
+					</p>
+				</div>
+				
+			</p>
+		</div>
+		
+		
+
+
+	</div>
+</div>
+
+<div class="spinner animate-show" ng-show="loading" slide-down>
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+
+
+<div class="row text-center animate-show" id="graphs" ng-hide="loading">
+	<!-- per year and product -->
+	<div class="col-xs-12">
+		<h2>{{yearProduct}}</h2>
+	</div>
+	<div id="products" class="col-xs-12">
+	</div>
+
+	<!-- per year -->
+	<div class="col-xs-12">
+		<h2>{{year}}</h2>
+	</div>
+	<div id="years" class="col-xs-12">
+	</div>
+	
+	<!-- per year and product -->
+	<div class="col-xs-12">
+		<h2>{{yearAndProduct}}</h2>
+	</div>
+	<div id="series" class="col-xs-12">
+	</div>
+</div>
