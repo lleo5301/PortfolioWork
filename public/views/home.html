@@ -1,13 +1,51 @@
-<div class="row view">
-	<div class="col-md-12" id="homeBanner">
-		<h1 class="heading" ng-hide="showText"> {{heading}}</h1>
-		<div id="homeImage">
-			<img id="homeImage" src="{{img}}">
-		</div>
+<div class="row animate-show" id="homeBanner" back-img="{{img}}" >
+	<div class="col-xs-10 col-xs-offset-1 heading text-center" >
+		<h1 class="animate-show " ng-show="showText"> {{heading}}</h1>
 	</div>
 </div>
-<div class="row" id="builtWith">
-	<div class="col-md-12">
-		
+
+
+<div class="row" id="about" ng-show="ready">
+	<h1 class="text-center">About</h1>
+	<div class="col-md-6 text-center">
+		<img class="picture img-circle" src="pictures/me.jpg">
+	</div>
+	<div class="col-md-6">
+		<p>
+			A dedicated full-stack web developer with a passion for
+			problem solving. With over 4 years of practical experience
+			in a professional environment.
+		</p>
 	</div>
 </div>
+<div class="row" id="builtWith" ng-show="ready">
+	<div class="col-xs-8 col-xs-offset-2">
+		<h2 class="text-center "> Skills </h2>
+	</div>
+	
+	<div class="col-md-3 col-xs-6 text-center" ng-repeat="icon in icons" ng-show="icon.description != 'github'" >
+		<img class="icon" src="{{icon.url}}" class="animate-show" fade-in/>
+	</div>
+</div>
+
+<div class="row" id="contact">
+	
+</div>
+
+
+<!-- <div class="row text-center" ng-show="ready">
+	<h1> Projects </h1>
+	<div class="col-md-4" ng-repeat="project in projects">
+		<h1>{{project.name}}</h1>
+	
+		<a href="{{project.url}}">
+			<img class="project" src="{{project.img}}">
+		</a>
+	</div>
+</div> -->
+
+
+<!-- <div class="row" id="builtWith">
+	
+
+</div> -->
